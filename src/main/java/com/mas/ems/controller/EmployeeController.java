@@ -51,7 +51,6 @@ public class EmployeeController {
 
     @PutMapping("{id}")
     public ResponseEntity<EmployeeDto> putMethodName(@PathVariable Long id, @RequestBody EmployeeDto employeeDto) {
-        //TODO: process PUT request
         employeeDto = employeeService.updaEmployee(id, employeeDto);
         
         return new ResponseEntity<>(employeeDto, HttpStatus.OK);
